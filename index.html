@@ -10,6 +10,9 @@
     margin:0;
     background-color: burlywood;
   }
+  * {
+    box-sizing: border-box;
+  }
   #nav {
     width: 100%;
     background-color: blanchedalmond;
@@ -21,6 +24,14 @@
     padding: 50px;
     line-height: 1.6;
   }
+  picture {
+    display:block;
+    margin-bottom: 30px;
+  }
+  picture img {
+    margin: 0 auto;
+    display:block;
+  }
   @media screen and (max-width: 600px) {
     #container {
         max-width: 400px;
@@ -31,14 +42,27 @@
     #nav {
       background-color: lawngreen;
     }
+    picture {
+      float:right;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
   }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js"></script>
 </head>
 <body>
   <div id="nav">
     Nav
   </div>
   <div id="container">
+    <picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="http://scottjehl.github.io/picturefill/examples/images/large.jpg, http://scottjehl.github.io/picturefill/examples/images/extralarge.jpg 2x" media="(min-width: 601px)">
+			<source srcset="http://scottjehl.github.io/picturefill/examples/images/small.jpg, http://scottjehl.github.io/picturefill/examples/images/medium.jpg 2x">
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="http://scottjehl.github.io/picturefill/examples/images/small.jpg, http://scottjehl.github.io/picturefill/examples/images/medium.jpg 2x" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+		</picture>
     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora placeat aspernatur reiciendis rerum ipsam omnis ipsum in animi error, reprehenderit eaque similique tempore unde numquam ducimus, dolorem cum inventore tenetur.</div>
     <div>Veniam ipsum facilis doloremque architecto delectus odit, omnis inventore perspiciatis suscipit saepe, voluptate nobis similique. Ducimus a odio voluptatum eligendi nobis, dolores aut impedit magnam rerum debitis. Soluta, repudiandae, totam.</div>
     <div>Tenetur quia, voluptatem in sint at tempore ullam! Quis quidem qui quaerat, iure expedita at, doloribus nesciunt aspernatur totam repudiandae assumenda facilis tempora labore tenetur dolorum. Cumque iure incidunt atque.</div>
